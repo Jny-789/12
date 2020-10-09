@@ -19,7 +19,7 @@ int main() {
 	int maxTh = 255;
 
 	srcMat = imread("C://Users//1234//Desktop//pic.png");
-	if (!srcMat.data) {
+	if (!srcMat.data) {                       //ÅĞ¶ÏÍ¼ÏñÊÇ·ñÔØÈë
 		cout << "Í¼ÏñÔØÈëÊ§°Ü" << endl;
 		return 0;
 	}
