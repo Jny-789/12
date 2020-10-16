@@ -7,9 +7,8 @@ int main() {
 	Mat src,img,dst_1,dst_2,dst_3,dst_4;
 	src = imread("C://Users//1234//Desktop//1.jpg");
 	threshold(src, img, 100, 255, THRESH_BINARY);    //二值化
-	Mat getStructuringElement(int shape, Size esize, Point anchor = Point(-1, -1));
-	int g_nStructElementSize = 3;           //结构元素(内核矩阵)的尺寸
-	Mat element = getStructuringElement(MORPH_RECT,Size(g_nStructElementSize, g_nStructElementSize));
+
+	Mat element = getStructuringElement(MORPH_RECT,Size(3, 3),Point(-1,-1));
 
 	erode(img, dst_1, element);               //腐蚀
 	dilate(img, dst_2, element);                //膨胀
