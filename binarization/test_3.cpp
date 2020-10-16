@@ -48,7 +48,7 @@ int main() {
 			rect.x = stats.at<int>(i, 0);
 			rect.y = stats.at<int>(i, 1);
 		    rect.width = stats.at<int>(i, 2);
-		    rect.height = stats.at<int>(1, 3);
+		    rect.height = stats.at<int>(i, 3);
 			rectangle(dst, rect, CV_RGB(255, 255, 255, ), 1, 8, 0);
 	}
 	imshow("区域标记后", dst);
