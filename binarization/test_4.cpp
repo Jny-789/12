@@ -28,7 +28,7 @@ int main()
 	int n = connectedComponentsWithStats(dst, labels, stats, centroids, 8, CV_32S);  //n为连通域数量    
 
 	int a = 100;                                    //定义一个初始值a=100，与画出的矩形的连通域比较
-	for (int i = 1; i < 10; i++) 
+	for (int i = 1; i < n; i++) 
 	{	
 		if (a > stats.at<int>(i, 2))                //若矩形宽度小于a则把宽度赋值给a
 			a = stats.at<int>(i, 2);                //循环后可得到矩形连通域宽度的最小值，即需要去除的左边框的宽度				 
@@ -37,7 +37,7 @@ int main()
     //去除左边框的干扰
 	for (int j = 0; j < height; j++)
 	{
-		for(int i=0;i<10;i++)
+		for(int i=0;i<a;i++)
 			dst.at<uchar>(j, i) = 0;
 	}
     imshow("处理边框后", dst);	
