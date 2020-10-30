@@ -42,7 +42,6 @@ int main()
 			//ĥƤ			
 			bilateralFilter(dst_1, dst_5, 10, 20, 20);
 			imshow("ĥƤ", dst_5);
-			
 		}
 		waitKey(30);
 	}
