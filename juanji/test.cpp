@@ -40,7 +40,7 @@ int main()
 			imshow("±ßÔµ¼ì²âx", dx);
 			imshow("±ßÔµ¼ì²ây", dy);
 			//Ä¥Æ¤			
-			bilateralFilter(dst_1, dst_5, 10, 20, 20);
+			bilateralFilter(frame, dst_5, 10, 20, 20);
 			imshow("Ä¥Æ¤", dst_5);
 		}
 		waitKey(30);
