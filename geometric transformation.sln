@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1259
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "geometric transformation", "geometric transformation\geometric transformation.vcxproj", "{E800ED3D-6D18-4656-A88D-3DAFAC0F86CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E800ED3D-6D18-4656-A88D-3DAFAC0F86CF}.Debug|x64.ActiveCfg = Debug|x64
+		{E800ED3D-6D18-4656-A88D-3DAFAC0F86CF}.Debug|x64.Build.0 = Debug|x64
+		{E800ED3D-6D18-4656-A88D-3DAFAC0F86CF}.Debug|x86.ActiveCfg = Debug|Win32
+		{E800ED3D-6D18-4656-A88D-3DAFAC0F86CF}.Debug|x86.Build.0 = Debug|Win32
+		{E800ED3D-6D18-4656-A88D-3DAFAC0F86CF}.Release|x64.ActiveCfg = Release|x64
+		{E800ED3D-6D18-4656-A88D-3DAFAC0F86CF}.Release|x64.Build.0 = Release|x64
+		{E800ED3D-6D18-4656-A88D-3DAFAC0F86CF}.Release|x86.ActiveCfg = Release|Win32
+		{E800ED3D-6D18-4656-A88D-3DAFAC0F86CF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FE53EA4-9928-45F2-ACDF-AC882B68AD9C}
+	EndGlobalSection
+EndGlobal
