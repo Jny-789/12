@@ -54,6 +54,7 @@ int main()
 	const cv::Point2f dst_pt[] = { cv::Point2f(0,0),cv::Point2f(width,height),cv::Point2f(0,height) };
 	const cv::Mat affine_matrix = cv::getAffineTransform(img_pt, dst_pt);
 	cv::warpAffine(img, dst, affine_matrix, img.size());
+
 	cv::imshow("·ÂÉä»¹Ô­", dst);
 
 	cv::waitKey(0);
