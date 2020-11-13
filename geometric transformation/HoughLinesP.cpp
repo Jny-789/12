@@ -22,6 +22,12 @@ int main()
 	std::vector<Vec4i>::const_iterator it = lines.begin();
 	for (; it != lines.end(); ++it)         //»­Ïß
 	{
+		/*int x1 = lines[0][0];
+		int y1 = lines[0][1];
+		int x2 = lines[0][2];
+		int y2 = lines[0][3];
+		line(src, Point(x1, y1), Point(x2, y2), Scalar(255, 255, 255), 2, CV_AA);*/
+
 		cv::Point pt1, pt2;
 		pt1.x = (*it)[0];
 		pt1.y = (*it)[1];
@@ -29,6 +35,17 @@ int main()
 		pt2.y = (*it)[3];
 		line(src, pt1, pt2, Scalar(255, 255, 255), 2, CV_AA);
 	}
+	//cv::Mat lines;
+	//cv::HoughLinesP(canny_dst, lines, 1, CV_PI / 180, 35, 15, 10);
+	//for (int i = 0; i < 4; i++)    //»­Ïß
+	//{
+	//	cv::Point pt1, pt2;
+	//	pt1.x = lines.at<Vec4i>(0);
+	//	pt1.y = (*it)[1];
+	//	pt2.x = (*it)[2];
+	//	pt2.y = (*it)[3];
+	//	line(src, pt1, pt2, Scalar(255, 255, 255), 2, CV_AA);
+	//}
 	imshow("src", src);
 	waitKey(0);
 	return 0;
