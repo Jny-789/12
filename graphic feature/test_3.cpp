@@ -31,6 +31,30 @@ int main()
 	threshold(rsrc_gray, img, 90, 255, THRESH_BINARY);
 	imshow("二值化", img);
 
+	/********************尝试分离出图片的R通道，但分离后杯盖与桌面颜色相近无法区分***********
+	for (int j = 0; j < h; j++)
+	{
+		for (int i = 0; i < w; i++)
+		{
+			uchar average = (rsrc.at<Vec3b>(j, i)[0] + rsrc.at<Vec3b>(j, i)[1] + rsrc.at<Vec3b>(j, i)[2]) / 3;
+			if (average > 150)                     //遍历像素，将像素值较亮的桌面部分转化成较暗像素，与杯盖区分开
+			{
+				rsrc.at<Vec3b>(j, i)[0] = 30;
+				rsrc.at<Vec3b>(j, i)[1] = 30;
+				rsrc.at<Vec3b>(j, i)[2] = 30;
+			}
+		}
+	}
+	imshow("rsrc", rsrc);
+
+	//分离R通道
+	std::vector<cv::Mat> channels;
+	cv::split(rsrc, channels);
+	cv::Mat R = channels.at(2);
+	imshow("red", R);
+	threshold(R, img, 120, 255, THRESH_BINARY);
+	*************************分离R通道**************************************/
+
 	//连通域
 	vector<vector<Point>> contours;
 	vector<Vec4i>hierarchy;
