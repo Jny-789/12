@@ -22,7 +22,7 @@ int main()
 		float width = (float)rbox.size.width;
 		float height = (float)rbox.size.height;
 		float ratio = width / height;
-		if (ratio > 0.8&&ratio < 1.2&&width>50)     //ɸѡ
+		if (ratio < 1.2&&width>50)  //ɸѡ
 		{
 			drawContours(src, contours, i, Scalar(0, 255, 255), 1, 8);
 			cv::Point2f vtx[4];
