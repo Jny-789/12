@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	Mat img, after_erode, labels, stats, centroids;
+	Mat img;
 	cv::Mat src_gray = imread("C://Users//1234//Desktop//20.png", 0);
 	cv::Mat src = imread("C://Users//1234//Desktop//20.png");
 	threshold(src_gray, img, 100, 255, THRESH_BINARY);
@@ -35,7 +35,7 @@ int main()
 		float ratio = width / height;
 		if (ratio > 0.8&&ratio < 1.2&&width>20)         //筛选
 		{
-			drawContours(src, contours, i, Scalar(0, 255, 255), -1, 8);      //画轮廓
+			drawContours(src, contours, i, Scalar(0, 255, 255), -1, 8);      //标记图形
 			cv::Point2f vtx[4];
 			rbox.points(vtx);
 			for (int i = 0; i < 4; ++i)
