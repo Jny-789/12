@@ -31,12 +31,12 @@ int main()
 		}
 	}
 	imshow("rsrc", rsrc);
+
 	//分离R通道
 	std::vector<cv::Mat> channels;
 	cv::split(rsrc, channels);
 	cv::Mat R = channels.at(2);
 	imshow("red", R);
-
 	threshold(R, img, 120, 255, THRESH_BINARY);
 	imshow("二值化", img);
 
