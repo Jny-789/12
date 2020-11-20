@@ -52,7 +52,7 @@ int main()
 		float width = (float)rbox.size.width;
 		float height = (float)rbox.size.height;
 		float ratio = height / width;
-		if (ratio < 2 && width < 130 && width>40) //ɸѡ
+		if (ratio < 2 && width < 130 && width>40)   //ɸѡ
 		{
 			cv::Point2f vtx[4];
 			rbox.points(vtx);
