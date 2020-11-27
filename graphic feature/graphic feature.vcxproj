@@ -125,6 +125,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HOG.cpp" />
     <ClCompile Include="test_1.cpp" />
     <ClCompile Include="test_2.cpp" />
     <ClCompile Include="test_3.cpp" />
