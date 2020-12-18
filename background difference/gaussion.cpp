@@ -52,10 +52,9 @@ int main() {
 						for (int n = 0; n < bgMats.size(); n++) {
 							var += pow(bgMats[n].at<uchar>(i, j) - averMat.at<uchar>(i, j), 2);
 						}
-						varMat.at<uchar>(i, j) = var / bgMats.size();      //方差
+						varMat.at<uchar>(i, j) = sqrt(var / bgMats.size());     //方差
 					}
-				}
-				
+				}	
 				/**********求均值、方差***********/
 
 				for (int i = 0; i < height; i++) {
@@ -66,7 +65,8 @@ int main() {
 					    else frame.at<uchar>(i, j) = 0;
 				    }
 			    }
-
+				imshow("均值", averMat);
+				imshow("方差", varMat);
 				imshow("frame", frame);
 			    waitKey(30);
 		    }			
