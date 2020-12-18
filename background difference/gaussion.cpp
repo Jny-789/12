@@ -60,7 +60,7 @@ int main() {
 
 				for (int i = 0; i < height; i++) {
 					for (int j = 0; j < width; j++) {					
-						if (abs(frame.at<uchar>(i, j) - averMat.at<uchar>(i, j)) > 13 * varMat.at<uchar>(i, j)) {					
+						if (abs(frame.at<uchar>(i, j) - averMat.at<uchar>(i, j)) > 3 * varMat.at<uchar>(i, j)) {					
 							frame.at<uchar>(i, j) = 255;
 					    }
 					    else frame.at<uchar>(i, j) = 0;
