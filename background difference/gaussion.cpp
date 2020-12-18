@@ -67,7 +67,7 @@ int main() {
 			    }
 				imshow("均值", averMat);
 				imshow("方差", varMat);
-				imshow("frame", frame);
+				imshow("高斯", frame);
 			    waitKey(30);
 		    }			
 		}			
